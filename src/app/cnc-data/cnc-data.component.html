@@ -1,0 +1,127 @@
+<div class="main">
+<h1>Predict/Forecast Expected Tool Wear</h1>
+<div class="img-list">
+    <img src="assets/img1.png" height="90%" width="60%">
+    <img src="assets/img2.png" height="417px" class="img2">
+</div>
+<div class="pie">
+  <img src="assets/img3.png"  class="img3">
+</div>
+<ul ngbNav #nav="ngbNav" [activeId]="1" class="nav-tabs justify-content-center">
+    <li [ngbNavItem]="1">
+      <a ngbNavLink><b>Overview</b></a>
+      <ng-template ngbNavContent>
+        <div class="para"> 
+          <h2><b>Description</b></h2>
+          <h5>CNC Milling Machine</h5>
+          <p>In the System-level Manufacturing and Automation Research . Machining data was collected from a CNC
+             machine for variations of tool condition, feed rate, and clamping pressure.</p>
+             <p>Feed Rate is one of the most important factors to consider when implementing any CNC strategy. 
+              Simply put, feed rate is the speed at which the cutter engages the part and is typically measured in
+               units/minute. Suggested cut feed rates will vary depending on the type of material you are cutting 
+               (i.e., aluminum, steel, wood, acrylic, etc.), the material of the cutter (carbide, high speed steel,
+                ceramic, etc.) and many other cutting factors including desired surface and the characteristics of 
+                the CNC machine itself.</p>
+                <h5>Clamping pressure</h5>
+                <p>When the cnc machining tool is designed with a clamping device, the determination of the clamping force includes three factors:
+
+                  1. the direction of the clamping force
+                  2.the point of action
+                  3.size</p>
+
+                  <h2><b>Intelligent Solution</b></h2>
+        </div>
+        
+      </ng-template>
+    </li>
+    <li [ngbNavItem]="2">
+      <a ngbNavLink><b>Tech Implementation</b></a>
+      <ng-template ngbNavContent>
+        <p class="para">Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
+          farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
+          ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar
+          helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson
+          8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
+          stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+          Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
+          farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
+          ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar
+          helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson
+          8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
+          stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
+          farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
+          ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar
+          helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson
+          8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
+          stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
+          farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
+          ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar
+          helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson
+          8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
+          stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+        </p>
+      </ng-template>
+    </li>
+    <li [ngbNavItem]="3">
+      <a ngbNavLink><b>Data Insights</b> </a>
+      <ng-template ngbNavContent>
+        <button type="button" class="btn btn-success">ML Model Prediction Report</button>
+        <iframe src="assets/profile.html" height="6200px" width="95%"></iframe>
+        <button type="button" class="btn btn-info">Time Series Forecasting</button>
+        <div class="forecasting">
+        <iframe src="assets/cncforecasting.html" height="6200px" width="95%"></iframe>
+      </div>
+      </ng-template>
+    </li>
+    
+    <li [ngbNavItem]="4">
+        <a ngbNavLink><b>Conclusion</b> </a>
+        <ng-template ngbNavContent>
+          <div class="para">
+            <p>From the dataset prediction of tool wear is done & with the help of machine learning models we are able to get accuracy between 96% to 98% with the hyper-parameter tunning.
+              The focus was on the Harmonic mean of presion and Recall (F1 score).</p>
+            <h5>Machining Finalized</h5>
+            <p>X-axis and Y-axis data have a great influence to tool wears, and the movement of X-axis and Y-axis can have a bad effect to machining process.
+              Position and voltage have a large influence in the given data.
+            </p>
+            <h5>Tool Wear</h5>
+            <p>X-axis and S-axis data have a great influence to tool wear.
+              Velocity and voltage have a large influence in the collected data.
+              A certain number of features created by FFT are also included in the top of feature importances, and it is considered that tool wear increased the amplitude in the specific frequency range.
+              </p>
+              <h5>Passed Visual Inspection</h5>
+              <p>X-axis and Y-axis data have a great influence to tool wears, and the movement of X-axis and Y-axis may be a bad affect to machining process.
+                Velocity and voltage have a large influence in the collected data.
+                The importance of features created by FFT increased compared to Machining Finalized case.
+                It is considered that the influence of tool weariness to the specific frequency range is related to an external processing result that can be detected by Machine operator.
+                </p>
+                <h5>Others</h5>
+                <p>There is almost less importance in Z-axis data.
+                  The differential features do not have a large influence on the detection of anomalies throughout, and it is thought that the difference between the command and the actual position was negligibly small for tool wear and machining process in most cases.
+                  
+                  In order to proceed to more detailed analysis, it is necessary to deepen the understanding of the operating principles of processing machines.</p>
+
+          </div>
+
+        </ng-template>
+      </li>
+    <li ngbNavItem [disabled]="true" class="ms-auto">
+      <a ngbNavLink><b>Disabled</b></a>
+      <ng-template ngbNavContent>
+        <p class="para">Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi.
+          Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio.
+          Duis pharetra et nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices et. Sed diam urna,
+          egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu. Vivamus faucibus nisl enim, nec
+          tristique ipsum euismod facilisis. Morbi ut bibendum est, eu tincidunt odio. Orci varius natoque penatibus et
+          magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem aliquet ultricies in eget
+          neque. Phasellus nec tortor vel tellus pulvinar feugiat.</p>
+      </ng-template>
+    </li>
+  </ul>
+  
+  <div [ngbNavOutlet]="nav" class="mt-2"></div>
+<div>
+
+</div>
+<button type="button" class="btn btn-success" routerLink="/cnclive">Live Implementation</button>
+</div>

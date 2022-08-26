@@ -1,0 +1,18 @@
+<div class="maindiv" id="fistname">
+<div class="container-fluid g-0">
+    <app-header (sideNavToggled)="sideNavStatus = $event;"></app-header>
+    <main>
+      <app-side-nav [sideNavStatus]="sideNavStatus" [ngClass]="{'app-side-nav-open': sideNavStatus}"></app-side-nav>
+      
+      <div class="display-area" [ngClass]="{'display-area-shrink': sideNavStatus}">
+        <p class="fs-2 fw-bold  fst-italic">
+          Our Solutions!...
+        </p>
+        <app-card></app-card>
+      </div>
+      
+    </main>
+    
+    
+  </div>
+</div>
