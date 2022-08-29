@@ -10,7 +10,7 @@ import { CncDataComponent } from './components/cnc-data/cnc-data.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CncliveComponent } from './components/cnclive/cnclive.component';
-
+import { NgxDropzoneModule } from 'ngx-dropzone';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ import { CncliveComponent } from './components/cnclive/cnclive.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxDropzoneModule
   ],
   providers: [],
   bootstrap: [AppComponent]

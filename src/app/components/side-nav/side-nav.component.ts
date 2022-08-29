@@ -22,7 +22,7 @@ export class SideNavComponent implements OnInit {
     {
       number: '3',
       name: 'Engine Predictive',
-      icon: 'fa-solid fa-virus',
+      icon: 'fa fa-cogs',
     },
     {
       number: '4',
@@ -42,7 +42,7 @@ export class SideNavComponent implements OnInit {
     {
       number: '7',
       name: 'Market Basket Analysis',
-      icon: 'fa-solid fa-book-journal-whills',
+      icon: 'fa fa-cart-arrow-down',
     },
   ];
   constructor() { }

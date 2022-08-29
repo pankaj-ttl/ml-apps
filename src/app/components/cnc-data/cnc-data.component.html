@@ -29,7 +29,7 @@
                   2.the point of action
                   3.size</p>
 
-                  <h2><b>Intelligent Solution</b></h2>
+                
         </div>
         
       </ng-template>
@@ -37,29 +37,137 @@
     <li [ngbNavItem]="2">
       <a ngbNavLink><b>Tech Implementation</b></a>
       <ng-template ngbNavContent>
-        <p class="para">Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
-          farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
-          ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar
-          helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson
-          8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
-          stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
-          Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
-          farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
-          ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar
-          helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson
-          8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
-          stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
-          farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
-          ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar
-          helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson
-          8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
-          stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
-          farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
-          ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar
-          helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson
-          8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
-          stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
-        </p>
+        <div class="para">
+          <h5>About the Data</h5>
+          <p>For predicting the tool wear as well as visualizing the tool condition with time advancements. This solution uses machine learning algorithms for predicting & lightgbm, holoviews for visualization.
+            This initiative aims to provide an effective and robust automated approach to detect and classify defects. The data includes features as well as the past data of tool condition.
+            We use Random-Forest as well as other models for evaluating the performance, Data visualization (especially using bokeh via holoviews).
+            </p>
+
+            <h5> Problem Framing</h5>
+            <p>For this use case, we create a model that predicts the defect class. Each record in the data represents a unique tool condition.
+              The target variable for this use case is to classify whether a CNC Tool falls into two different classifications of defects. This choice in target makes this a Binary-class classification problem.
+              Some features we use here are feed rate, clamp pressure, spindle axis, X, Y, Z, S.
+              </p>
+              <h6>1.	Feed rate</h6>
+              <p>Feed Rate is one of the most important factors to consider when implementing any CNC strategy. Simply put, feed rate is the speed at which the cutter engages the part and is typically measured in units/minute. Suggested cut feed rates will vary depending on the type of material you are cutting (i.e., aluminum, steel, wood, acrylic, etc.), the material of the cutter (carbide, high speed steel, ceramic, etc.) and many other cutting factors including desired surface and the characteristics of the CNC machine itself.</p>
+              <h6>•	Clamping pressure</h6>
+              <p>When the cnc machining tool is designed with a clamping device, the determination of the clamping force includes three factors:
+                •	the direction of the clamping force
+                •	the point of action
+                •	Size
+                
+                to use the sensor signals from the CNC machine to detect if a cutting tool being used is worn out. Theoretically this allows the CNC operator to detect in real time that the cutting tool is worn out in order to take corrective action prior to the resultant part ending in a quality failure.</p>
+
+                <p>Beyond the given features, we suggest incorporating any additional data your organization may collect that could be relevant to defect detection. TtAI is able to combine any numeric, categorical, text, date features with images, and use them to collectively improve the accuracy of your models. TtAI will quickly inform you of which features are important or unimportant, allowing you to iterate your feature list along the way.   </p>
+
+                <h5>Sample Feature List</h5>
+                <div class="table">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Description</th>
+                      <th scope="col">Data Types</th>
+                      
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td> Actual Position </td>
+                      <td>float</td>
+                      
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td> Actual Velocity</td>
+                      <td>float</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td> CURRENT_FEEDRATE </td>
+                      <td>float </td>
+                      
+                    </tr>
+                
+                <tr>
+                      <th scope="row">4</th>
+                      <td> Machining Process </td>
+                      <td>object</td>
+                      
+                    </tr>
+                
+                <tr>
+                      <th scope="row">5</th>
+                      <td> CURRENT PROGRAM NUMBER
+                </td>
+                      <td>float </td>
+                      
+                    </tr>
+                
+                  </tbody>
+                </table>
+              </div>
+                
+        <h5>Data Preparation</h5>
+        <p>The dataset is made of a CSV file and folders containing features. Here are the steps needed to prepare the data for modeling:
+          •	Create a Tool wear folder
+          •	Add all the files
+          •	Create a CSV file containing the target column (defect class)
+          •	Add a column to the CSV file should be associated with the corresponding defect class of the tool failure data (train).
+          •	Drag and drop, or upload, your csv file into TtAI.
+          </p>
+          <h5>Model Training</h5>
+
+          <p>TtAI allows both novice and expert users to quickly and easily build explainable machine learning models using Data. Simply upload a csv file into TtAI to prepare to build new custom models to classify   CNC tool failure with prediction and forecasting with help of other feature types like numeric, categorical to provide a broader set of data perspectives to your AI models.  
+            You can get started with TtAI with just a few Data in csv format and train models only using commodity hardware.
+            </p>
+
+            <h5>Interpret the Results</h5>
+            <p>In interpreting the model, several important questions include:
+              •	Can you trust the model? 
+              •	Does the model Understood by layman?
+              
+              With TtAI, you can now visually assess your models using insight capabilities:
+              TtAI  uses supervised machine learning model for this approach. With the data integration we provide two solution for this type of data as visualization and prediction play more important role in detecting and forecasting the tool condition.
+              
+              Step 1 : get insights of the data 
+              Step 2 : Remove extensive outliers using (IQR,Z-score)
+              Step3: check pair plot for data distribution and skewness
+              
+              
+              </p>
+              <h6>Graph represents relation of machine process to the current feed rate</h6>
+              <img class="graphs" src="assets/g1.png">
+
+              <h6 style="margin-left: 30rem;
+              margin-top: 40px;">Graph represents actual accereletion and actual velocity with target value</h6>
+              <img style="margin-left: 30rem;
+              margin-top: 10px;" class="graphs" src="assets/g2.png">
+
+
+              <h6 style="margin-top: 40px;">Feature importance graphical representation.</h6>  
+              <img class="graphs" src="assets/g3.png">
+
+              <h6 style="margin-left: 30rem;
+              margin-top: 40px;">Tool condition (worn or unworn)</h6>
+              <img style="margin-left: 30rem;
+              margin-top: 10px;" class="graphs" src="assets/g4.png">
+
+              <h6 style="margin-top: 40px;">Type 1 error and Type 2 error plotting at every threshold.</h6>  
+              <img class="graph" src="assets/g5.png">
+
+              <h5>Evaluate Accuracy</h5>
+              
+                <p>TtAI also allows you to evaluate the model's accuracy in predicting the various classes of defects. A quick look at the confusion matrix for the recommended model shows that the model is performing accurately, with a limited number of CNC tool that are being misclassified.
+                
+                 
+                </p>
+                <img  src="assets/mat.png">
+              
+             
+            </div>
       </ng-template>
     </li>
     <li [ngbNavItem]="3">
@@ -69,7 +177,7 @@
         <iframe src="assets/profile.html" height="6200px" width="95%"></iframe>
         <button type="button" class="btn btn-info">Time Series Forecasting</button>
         <div class="forecasting">
-        <iframe src="assets/cncforecasting.html" height="6200px" width="95%"></iframe>
+        <iframe src="assets/cncforecasting.html" height="47763px" width="95%"></iframe>
       </div>
       </ng-template>
     </li>
