@@ -11,6 +11,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CncliveComponent } from './components/cnclive/cnclive.component';
 import { NgxDropzoneModule } from 'ngx-dropzone';
+import { SafePipe } from './safe.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NgxDropzoneModule } from 'ngx-dropzone';
     CardComponent,
     CncDataComponent,
     DashboardComponent,
-    CncliveComponent
+    CncliveComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

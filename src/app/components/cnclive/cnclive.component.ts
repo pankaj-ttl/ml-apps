@@ -10,7 +10,7 @@ import { HttpClient} from '@angular/common/http';
 export class CncliveComponent implements OnInit {
   
   baseurl = "http://172.28.77.122:2000/";
-  url1 = "";
+  url1 = ""
   model_id=1;
 
    
@@ -51,7 +51,7 @@ onUpload(){
     
                            console.log(bar_url)
     console.log(hist_url)
-     this.url1 = this.baseurl + bar_url;
+    this.url1 = this.baseurl + bar_url;
     let url2 = this.baseurl + hist_url;
     
     console.log(this.url1);
