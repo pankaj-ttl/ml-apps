@@ -10,12 +10,12 @@ import { HttpClient} from '@angular/common/http';
 export class CncliveComponent implements OnInit {
   
   baseurl = "http://172.28.77.122:2000/";
-  url1 = ""
+  url1 = this.baseurl;
   model_id=1;
 
    
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    // throw new Error('Method not implemented.');
   }
   files: File[] = [];
   constructor(private http: HttpClient){}
@@ -52,7 +52,8 @@ onUpload(){
                            console.log(bar_url)
     console.log(hist_url)
     this.url1 = this.baseurl + bar_url;
-    let url2 = this.baseurl + hist_url;
+    console.log('url1',this.url1);
+    // let url2 = this.baseurl + hist_url;
     
     console.log(this.url1);
   })
